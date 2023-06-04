@@ -15,4 +15,4 @@ for file in $files; do
 done
 
 # Insert the links into the README.md file
-sed -i "s|<!-- INSERT_LINKS_HERE -->|$links|" README.md
+sed -i "s|<!-- INSERT_LINKS_HERE -->|$links|" README.MD
