@@ -1,0 +1,23 @@
+name: build
+
+on:
+  push:
+    branches: [ $default-branch ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Populate README.MD links
+        run: ./populate.sh
+
+      - id: auto-commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "README.MD Updated"
+          skip_fetch: true
+          skip_checkout: true
+          branch: master
