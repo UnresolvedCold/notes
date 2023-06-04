@@ -1,3 +1,4 @@
 # Index
 
-<!-- INSERT_LINKS_HERE -->
+[test-note.md](notes/test-note.md)
+
